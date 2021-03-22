@@ -4,8 +4,10 @@ declare type secureTextEntryType = true | false;
 declare type autoCapitalizeType = 'characters' | 'words' | 'sentences' | 'none';
 interface PropTypes {
     label: string;
+    keyboardType?: string;
     onChangeText?: any;
     value?: string;
+    placeholder?: string;
     secureTextEntry?: secureTextEntryType;
     autoCapitalize?: autoCapitalizeType;
     fontSize?: number;
@@ -20,5 +22,5 @@ interface PropTypes {
     passiveBorderColor?: string;
     fontFamily?: string;
 }
-declare const _default: React.MemoExoticComponent<({ label, onChangeText, value, secureTextEntry, autoCapitalize, fontSize, height, duration, easing, activeValueColor, passiveValueColor, activeLabelColor, passiveLabelColor, activeBorderColor, passiveBorderColor, fontFamily, }: PropTypes) => JSX.Element>;
+declare const _default: React.MemoExoticComponent<({ label, keyboardType, onChangeText, value, secureTextEntry, autoCapitalize, fontSize, height, duration, easing, activeValueColor, passiveValueColor, activeLabelColor, passiveLabelColor, activeBorderColor, passiveBorderColor, fontFamily, placeholder}: PropTypes) => JSX.Element>;
 export default _default;

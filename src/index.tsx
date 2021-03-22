@@ -15,7 +15,9 @@ type autoCapitalizeType = 'characters' | 'words' | 'sentences' | 'none';
   
 interface PropTypes {
   label: string;
+  keyboardType?: string;
   onChangeText?: any;
+  placeholder?: string;
   value?: string;
   secureTextEntry?: secureTextEntryType;
   autoCapitalize?: autoCapitalizeType;
@@ -60,6 +62,7 @@ const OutlineInput = ({
   label,
   onChangeText,
   value,
+  placeholder,
   secureTextEntry = false,
   autoCapitalize = 'none',
   fontSize = 16,
@@ -72,6 +75,7 @@ const OutlineInput = ({
   passiveLabelColor = '#757575',
   activeBorderColor = '#51AD56',
   passiveBorderColor = '#EFEFEF',
+  keyboardType,
   fontFamily = 'System',
 }: PropTypes) => {
   const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -173,6 +177,7 @@ const OutlineInput = ({
   const inputProps = {
     secureTextEntry,
     value,
+    placeholder,
     onChangeText,
     onFocus,
     onBlur,
@@ -183,6 +188,7 @@ const OutlineInput = ({
     fontSize: inputValueFontSize,
     activeBorderColor,
     passiveBorderColor,
+    keyboardType,
     style: [
       { fontFamily },
       InputStyle({
@@ -246,7 +252,7 @@ const InputStyle = ({
   fontSize,
   borderWidth: 1,
   borderColor: isFocused ? activeBorderColor : passiveBorderColor,
-  borderRadius: 6,
+  borderRadius: 16,
   color: isFocused ? activeValueColor : passiveValueColor,
 });
 
