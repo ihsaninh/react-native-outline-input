@@ -15,6 +15,7 @@ type autoCapitalizeType = 'characters' | 'words' | 'sentences' | 'none';
   
 interface PropTypes {
   label: string;
+  editable?: boolean;
   keyboardType?: string;
   onChangeText?: any;
   placeholder?: string;
@@ -63,6 +64,7 @@ const OutlineInput = ({
   onChangeText,
   value,
   placeholder,
+  editable = true,
   secureTextEntry = false,
   autoCapitalize = 'none',
   fontSize = 16,
@@ -177,6 +179,7 @@ const OutlineInput = ({
   const inputProps = {
     secureTextEntry,
     value,
+    editable,
     placeholder,
     onChangeText,
     onFocus,

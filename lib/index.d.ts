@@ -12,6 +12,7 @@ interface PropTypes {
     autoCapitalize?: autoCapitalizeType;
     fontSize?: number;
     height?: number;
+    editable?: boolean;
     duration?: number;
     easing?: EasingFunction;
     activeValueColor?: string;
@@ -22,5 +23,5 @@ interface PropTypes {
     passiveBorderColor?: string;
     fontFamily?: string;
 }
-declare const _default: React.MemoExoticComponent<({ label, keyboardType, onChangeText, value, secureTextEntry, autoCapitalize, fontSize, height, duration, easing, activeValueColor, passiveValueColor, activeLabelColor, passiveLabelColor, activeBorderColor, passiveBorderColor, fontFamily, placeholder}: PropTypes) => JSX.Element>;
+declare const _default: React.MemoExoticComponent<({ label, keyboardType, editable, onChangeText, value, secureTextEntry, autoCapitalize, fontSize, height, duration, easing, activeValueColor, passiveValueColor, activeLabelColor, passiveLabelColor, activeBorderColor, passiveBorderColor, fontFamily, placeholder}: PropTypes) => JSX.Element>;
 export default _default;
